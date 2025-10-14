@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "J:\\2025-2026\\C#\\edzesterv\\edzesterv_ikt_feladat\\edzesterv\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7278DBE8-149B-4225-9ED3-9867E8B4E8B4}|edzesterv\\edzesterv.csproj|j:\\2025-2026\\c#\\edzesterv\\edzesterv_ikt_feladat\\edzesterv\\edzesterv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7278DBE8-149B-4225-9ED3-9867E8B4E8B4}|edzesterv\\edzesterv.csproj|solutionrelative:edzesterv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "J:\\2025-2026\\C#\\edzesterv\\edzesterv_ikt_feladat\\edzesterv\\edzesterv\\Program.cs",
+              "RelativeDocumentMoniker": "edzesterv\\Program.cs",
+              "ToolTip": "J:\\2025-2026\\C#\\edzesterv\\edzesterv_ikt_feladat\\edzesterv\\edzesterv\\Program.cs",
+              "RelativeToolTip": "edzesterv\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T10:20:57.311Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
