@@ -13,6 +13,10 @@ namespace edzesterv
             string nev;
             double testsuly, edzesido, kaloria, teljeshetiedzes, kaloriaszoro;
             byte edzescelja, edzeserroseg;
+            Console.Write("Adja meg a nevét: ");
+            nev = Convert.ToString(Console.ReadLine());
+
+
         }
     }
 }
