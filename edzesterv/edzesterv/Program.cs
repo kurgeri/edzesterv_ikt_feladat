@@ -13,14 +13,14 @@ namespace edzesterv
         {
 
             // 1. feladat
-            double testsuly;
-            byte edzescelja;
+           
             int helyesNev = 0;
+            string nev;
             do
             {
                 helyesNev = 0;
                 Console.Write("Adja meg a nevét: ");
-                string nev = Convert.ToString(Console.ReadLine());
+                nev = Convert.ToString(Console.ReadLine());
                 if (nev[0].ToString() == nev[0].ToString().ToUpper())
                 {
                     helyesNev++;
@@ -44,36 +44,59 @@ namespace edzesterv
                 } 
             }
             while (helyesNev != 3);
-            // ellenőrzés, idk hogy kéne
-            Console.Write("Adja meg a testsúlyát 50-120 kg : ");
-            testsuly = Convert.ToDouble(Console.ReadLine());
-            if (testsuly < 50 || testsuly > 120) {
-                Console.WriteLine("A megadott érték nem jó!");
 
-            }
+            
+            double testsuly;
+            do
+            {
+                Console.Write("Adja meg a testsúlyát 50-120 kg : ");
+                testsuly = Convert.ToDouble(Console.ReadLine());
+
+                if (testsuly > 120 || testsuly < 50)
+                {
+                    Console.WriteLine("A megadott érték helytelen!");
+                }
+            } while (testsuly > 120 || testsuly < 50);
+         
 
             //2. feladat
-            Console.Write("Mi az edzés célja? 1. Állóképesség fejlesztése \n 2. Izomtömeg növelése \n 3.Fogyás\n :");
-            edzescelja = Convert.ToByte(Console.ReadLine());
+           
+            int edzescelja;
+            string edzesceljaszoveg = "";
+
+            do
+            {
+                Console.Write("Mi az edzés célja?\n 1. Állóképesség fejlesztése \n 2. Izomtömeg növelése \n 3.Fogyás\n :");
+                edzescelja = Convert.ToInt32(Console.ReadLine());
+                if (edzescelja < 1 || edzescelja > 3)
+                {
+                    Console.WriteLine("Érvénytelen érték");
+                    edzesceljaszoveg = "Érvénytelen érték";
+                }
+            } while (edzescelja < 1 || edzescelja > 3 );
+
+
+
             double edzesido = 0;
             double kaloriaszorzo = 0;
             switch (edzescelja) {
 
-                default:
-                Console.WriteLine("Érvénytelen érték!");
-                break;
+
                 case 1:
                     edzesido = 45;
                     kaloriaszorzo = 0.12;
+                    edzesceljaszoveg = "Állóképesség fejlesztése";
 
                     break;
                 case 2:
                     edzesido = 60;
                     kaloriaszorzo = 0.10;
+                    edzesceljaszoveg = "Izomtömeg növelése";
                     break;
                 case 3:
                     edzesido = 30;
                     kaloriaszorzo = 0.15;
+                    edzesceljaszoveg = "Fogyás";
                     break;
                
             }
@@ -105,11 +128,12 @@ namespace edzesterv
           
 
             double edzesidonap = edzesido * (1 + 0.1 * edzesero);
-            Console.WriteLine(edzesidonap);
+            double teljesheti = edzesnap * edzesidonap;
             // 4. feladat
 
-            double kaloria = testsuly * (edzesido * edzesnap) * kaloriaszorzo;
-            Console.WriteLine(kaloria);
+            double kaloria = testsuly * teljesheti * kaloriaszorzo;
+
+            Console.WriteLine($"Név: {nev}\nCélja: {edzesceljaszoveg}\nHeti teljes edzésidő: {teljesheti} perc\nElégetett kalória: {kaloria} J ");
             
 
         }
