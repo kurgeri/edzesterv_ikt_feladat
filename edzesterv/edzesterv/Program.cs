@@ -71,7 +71,7 @@ namespace edzesterv
                 if (edzescelja < 1 || edzescelja > 3)
                 {
                     Console.WriteLine("Érvénytelen érték");
-                    edzesceljaszoveg = "Érvénytelen érték";
+                    edzesceljaszoveg = "Érvénytelen cél";
                 }
             } while (edzescelja < 1 || edzescelja > 3 );
 
