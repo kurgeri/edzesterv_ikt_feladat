@@ -79,10 +79,31 @@ namespace edzesterv
             }
 
             // 3.feladat 
-            Console.Write("Adja meg hány napot szeretne edzeni (1-7):");
-            byte edzesnap = Convert.ToByte(Console.ReadLine());
-            Console.Write("Adjon meg egy erősségi szintet(1-5): ");
-            byte edzesero = Convert.ToByte(Console.ReadLine());
+            
+            int edzesnap;
+            do
+            {
+                Console.Write("Adja meg hány napot szeretne edzeni (1-7):");
+                edzesnap = Convert.ToInt32(Console.ReadLine());
+                if (edzesnap < 0 || edzesnap > 7)
+                {
+                    Console.WriteLine("A megadott érték helytelen!");
+                }
+
+            } while (edzesnap < 0 || edzesnap > 7 );
+            int edzesero;
+            do
+            {
+                Console.Write("Adjon meg egy erősségi szintet(1-5): ");
+                edzesero = Convert.ToInt32(Console.ReadLine());
+                if (edzesero < 0 || edzesero > 5)
+                {
+                    Console.WriteLine("A megadott érték helytelen!");
+                }
+            } while (edzesero < 0 || edzesero > 5);
+            
+          
+
             double edzesidonap = edzesido * (1 + 0.1 * edzesero);
             Console.WriteLine(edzesidonap);
             // 4. feladat
