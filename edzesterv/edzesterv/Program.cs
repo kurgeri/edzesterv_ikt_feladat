@@ -13,7 +13,7 @@ namespace edzesterv
         {
 
             // 1. feladat
-            double testsuly, kaloria, teljeshetiedzes, kaloriaszoro;
+            double testsuly;
             byte edzescelja;
             int helyesNev = 0;
             do
@@ -38,6 +38,10 @@ namespace edzesterv
                     }
 
                 }
+                if (helyesNev != 3)
+                {
+                    Console.WriteLine("A megadott név nem megfelelő!");
+                } 
             }
             while (helyesNev != 3);
             // ellenőrzés, idk hogy kéne
@@ -49,9 +53,10 @@ namespace edzesterv
             }
 
             //2. feladat
-            Console.Write("Mi az edzés célja? 1. Állóképesség fejlesztése \n 2. Izomtömeg növelése \n 3.Fogyás");
+            Console.Write("Mi az edzés célja? 1. Állóképesség fejlesztése \n 2. Izomtömeg növelése \n 3.Fogyás\n :");
             edzescelja = Convert.ToByte(Console.ReadLine());
             double edzesido = 0;
+            double kaloriaszorzo = 0;
             switch (edzescelja) {
 
                 default:
@@ -59,12 +64,16 @@ namespace edzesterv
                 break;
                 case 1:
                     edzesido = 45;
+                    kaloriaszorzo = 0.12;
+
                     break;
                 case 2:
                     edzesido = 60;
+                    kaloriaszorzo = 0.10;
                     break;
                 case 3:
                     edzesido = 30;
+                    kaloriaszorzo = 0.15;
                     break;
                
             }
@@ -75,7 +84,11 @@ namespace edzesterv
             Console.Write("Adjon meg egy erősségi szintet(1-5): ");
             byte edzesero = Convert.ToByte(Console.ReadLine());
             double edzesidonap = edzesido * (1 + 0.1 * edzesero);
+            Console.WriteLine(edzesidonap);
+            // 4. feladat
 
+            double kaloria = testsuly * (edzesido * edzesnap) * kaloriaszorzo;
+            Console.WriteLine(kaloria);
             
 
         }
